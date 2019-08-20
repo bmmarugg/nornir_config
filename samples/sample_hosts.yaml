@@ -1,0 +1,22 @@
+---
+Cisco_IOS:
+    hostname: 10.1.1.1
+    port: 22
+    platform: ios
+    groups:
+        - cisco_ios
+        - l2_access
+Cisco_IOSXR:
+    hostname: 10.10.1.1
+    port: 22
+    platform: ios
+    groups:
+        - cisco_iosxr
+        - routers
+Cisco_NXOS:
+    hostname: 10.10.10.1
+    port: 443
+    platform: nxos
+    groups:
+        - cisco_nxos
+        - core
