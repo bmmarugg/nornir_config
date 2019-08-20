@@ -8,5 +8,5 @@ It is worth knowing the differences between a configuration replace and a merge.
 
   ### Replace:
   1. Creates backup snapshot configuration file prior to new configuration push;
-  2. Replaces or deletes <b>all</b> lines of code in running-configuration that are different or don't exist in the candidate configuration. 
+  2. Replaces or deletes <u><b>all</b></u> lines of code in running-configuration that are different or don't exist in the candidate configuration. 
   Use with caution. 
