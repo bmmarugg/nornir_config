@@ -1,0 +1,25 @@
+---
+cisco_ios:
+    - platform: ios
+    - username: ios_admin
+    - password: ios_password
+l2_access:
+    - platform: ios
+    - username: ios_admin
+    - password: ios_password
+cisco_iosxr:
+    - platform: ios
+    - username: iosxr_admin
+    - password: iosxr_password
+routers:
+    - platform: ios
+    - username: router_admin
+    - password: router_password
+cisco_nxos:
+    - platform: nxos
+    - username: nexus_admin
+    - password: nexus_password
+core:
+    - platform: nxos
+    - username: core_admin
+    - password: core_password
