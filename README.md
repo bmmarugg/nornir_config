@@ -1,14 +1,10 @@
 # Nornir Configuration Script
 
 ## Description:
-This is a cript that utilizes Nornir to push configuration files to a single or group of devices that a user can define. User can define whether the configuration push is a full replace or just a merge.
+This is a cript that utilizes Nornir to push configuration files to a single or group of devices that a user can define. User can define whether the configuration push is a full replace or just a merge. The script will perform a dry run first, always, to show what lines of code are being added, omitted, or changed. Users will then be prompted to confirm the commitment of the new code before Nornir will finalize the process.
 
-## Replace vs. Merge
-It is worth knowing the differences between a configuration replace and a merge. 
 
-  ### Replace:
-  1. Creates backup snapshot configuration file prior to new configuration push;
-  2. Replaces or deletes <u>all</u> lines of code in the current running-configuration that are different or don't exist in the candidate
-  configuration. 
-  3. Deletion or negation of lines of code in the running-config is done via omitting the code in the candidate config file. For example, to delete a BGP neighbor from a router's running-config using a <b>replace</b>
-  
+## Directions for use:
+Users will need to define the filter type, filter to apply, configuration type, and path to candidate configuration file, in that order, when they run the command. The syntax for the command is as follows:
+
+python nornir_config.py {group, name} <i>group/device name</i> {replace, merge} <i>path to/name of candidate config</i>
