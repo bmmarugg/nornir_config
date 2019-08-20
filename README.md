@@ -8,5 +8,7 @@ It is worth knowing the differences between a configuration replace and a merge.
 
   ### Replace:
   1. Creates backup snapshot configuration file prior to new configuration push;
-  2. Replaces or deletes <u><b>all</b></u> lines of code in running-configuration that are different or don't exist in the candidate configuration. 
-  Use with caution. 
+  2. Replaces or deletes <u>all</u> lines of code in the current running-configuration that are different or don't exist in the candidate
+  configuration. 
+  3. Deletion or negation of lines of code in the running-config is done via omitting the code in the candidate config file. For example, to delete a BGP neighbor from a router's running-config using a <b>replace</b>
+  
